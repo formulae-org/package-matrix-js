@@ -1,0 +1,34 @@
+{
+	"pathMatrix" : "Matrices",
+
+	"editionNumberRows"     : "Número de renglones",
+	"editionNumberColumns"  : "Número de columnas",
+	"editionInvalidRows"    : "Valor inválido para número de renglones",
+	"editionInvalidColumns" : "Valor inválido para número de columnas",
+	
+	"leafCreateMatrix"       : " Crear matriz",
+	"leafInsertRowAbove"     : " Insertar renglón arriba",
+	"leafInsertRowBelow"     : " Insertar renglón abajo",
+	"leafInsertColumnBefore" : " Insertar columna a la izquierda",
+	"leafInsertColumnAfter"  : " Insertar columna a la derecha",
+	"leafDeleteRow"          : " Eliminar renglón",
+	"leafDeleteColumn"       : " Eliminar columna",
+	
+	"msgNotMatrixElement" : "Expresión no es un elemento de una matriz",
+
+	"nameDeterminant"  : "Determinante de matriz",
+	"childDeterminant" : "Matriz a obtener determinante",
+	"leafDeterminant"  : "Determinante",
+
+	"nameTranspose"    : "Transposition matricial",
+	"literalTranspose" : "⊤",
+	"leafTranspose"    : "Transposición",
+
+	"nameKroneckerProduct"     : "Producto de Kronecker",
+	"operatorKroneckerProduct" : "⊗",
+	"leafKroneckerProduct"     : "Producto de Kronecker",
+
+	"nameAdjoint"    : "Matriz adjunta",
+	"literalAdjoint" : "†",
+	"leafAdjoint"    : "Adjunta"
+}

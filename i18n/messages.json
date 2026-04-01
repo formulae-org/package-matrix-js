@@ -1,0 +1,34 @@
+{
+	"pathMatrix" : "Matrix",
+	
+	"editionNumberRows"     : "Number of rows",
+	"editionNumberColumns"  : "Number of columns",
+	"editionInvalidRows"    : "Invalid value for rows",
+	"editionInvalidColumns" : "Invalid value for columns",
+	
+	"leafCreateMatrix"       : " Create matrix",
+	"leafInsertRowAbove"     : " Insert row above",
+	"leafInsertRowBelow"     : " Insert row below",
+	"leafInsertColumnBefore" : " Insert column before",
+	"leafInsertColumnAfter"  : " Insert column after",
+	"leafDeleteRow"          : " Delete row",
+	"leafDeleteColumn"       : " Delete column",
+	
+	"msgNotMatrixElement" : "Expression is not an element of a matrix",
+
+	"nameDeterminant"  : "Matrix determinant",
+	"childDeterminant" : "Matrix to get its determinant",
+	"leafDeterminant"  : "Determinant",
+
+	"nameTranspose"    : "Matrix transposition",
+	"literalTranspose" : "⊤",
+	"leafTranspose"    : "Transpose",
+
+	"nameKroneckerProduct"     : "Kronecker product",
+	"operatorKroneckerProduct" : "⊗",
+	"leafKroneckerProduct"     : "Kronecker product",
+
+	"nameAdjoint"    : "Matrix adjoint",
+	"literalAdjoint" : "†",
+	"leafAdjoint"    : "Adjoint"
+}
