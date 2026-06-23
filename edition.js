@@ -16,14 +16,14 @@ You should have received a copy of the GNU Affero General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-'use strict';
+"use strict";
 
 export class Matrix extends Formulae.Package {}
 
 Matrix.editionCreateMatrix = function() {
 	if (Matrix.createMatrixForm === undefined) {
 		let table;
-
+		
 		table = document.createElement("table");
 		table.classList.add("bordered");
 		table.innerHTML =
@@ -43,19 +43,19 @@ Matrix.editionCreateMatrix = function() {
 
 		Matrix.createMatrixForm = table;
 	}
-
+	
 	let tableRows = Matrix.createMatrixForm.rows;
 	let rows = tableRows[1].cells[1].firstChild;
 	let cols = tableRows[2].cells[1].firstChild;
 	let ok   = tableRows[3].cells[0].firstChild;
-
+	
 	ok.onclick = () => {
 		let R = parseInt(rows.value);
 		if (isNaN(R) || R < 1) {
 			alert(Matrix.messages.editionInvalidRows);
 			return;
 		}
-
+		
 		let C = parseInt(cols.value);
 		if (isNaN(C) || C < 1) {
 			alert(Matrix.messages.editionInvalidColumns);
@@ -212,7 +212,7 @@ Matrix.editionDeleteColumn = function(after) {
 	}
 	
 	let rows = matrix.children.length;
-
+	
 	for (let i = 0; i < rows; ++i) {
 		matrix.children[i].removeChildAt(c);
 	}

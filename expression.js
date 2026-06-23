@@ -16,7 +16,7 @@ You should have received a copy of the GNU Affero General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-'use strict';
+"use strict";
 
 export class Matrix extends Formulae.Package {}
 
@@ -24,11 +24,11 @@ Matrix.Determinant = class extends Expression.UnaryExpression {
 	getTag() { return "Math.Matrix.Determinant"; }
 	getName() { return Matrix.messages.nameDeterminant; }
 	getChildName() { return Matrix.messages.childDeterminant; }
-
+	
 	prepareDisplay(context) {
 		let child = this.children[0];
 		let cols = Utils.isMatrix(child);
-
+		
 		if (cols < 0) {
 			child.prepareDisplay(context);
 		}
@@ -36,24 +36,24 @@ Matrix.Determinant = class extends Expression.UnaryExpression {
 			child.cols = cols;
 			child.prepareDisplayAsMatrix(context, 10, 0);
 		}
-
+		
 		child.x = child.y = 5;
 		this.width = child.width + 10;
 		this.height = child.height + 10;
 		this.horzBaseline = 5 + child.horzBaseline;
 		this.vertBaseline = 5 + child.vertBaseline;
 	}
-
+	
 	display(context, x, y) {
 		let child = this.children[0];
-
+		
 		if (child.cols === undefined || child.cols < 0) {
 			child.display(context, x + child.x, y + child.y);
 		}
 		else {
 			child.displayAsMatrix(context, x + child.x, y + child.y);
 		}
-
+		
 		context.beginPath();
 		context.moveTo (x,              y); context.lineTo(x,              y + this.height); // preventing obfuscation
 		context.moveTo (x + this.width, y); context.lineTo(x + this.width, y + this.height); // preventing obfuscation
@@ -63,7 +63,7 @@ Matrix.Determinant = class extends Expression.UnaryExpression {
 
 Matrix.setExpressions = function(module) {
 	Formulae.setExpression(module, "Math.Matrix.Determinant", Matrix.Determinant);
-
+	
 	Formulae.setExpression(module, "Math.Matrix.KroneckerProduct", {
 		clazz:       Expression.Infix,
 		getTag:      () => "Math.Matrix.KroneckerProduct",
@@ -72,7 +72,7 @@ Matrix.setExpressions = function(module) {
 		min:         -2,
 		max:         null
 	});
-
+	
 	[ "Transpose", "Adjoint" ].forEach(tag => Formulae.setExpression(module, 'Math.Matrix.' + tag, {
 		clazz:      Expression.SuperscriptedLiteral,
 		getTag:     () => "Math.Matrix." + tag,
